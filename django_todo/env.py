@@ -1,3 +1,3 @@
 import os
 
-os.environ.setdefault("DJANGO_SECRET_KEY", "+8b%f!9w-t4ep0@y5cz(nwt)9fu_+c6p6-zv0c49lpk@7^isg_")
+os.environ.setdefault("DJANGO_SECRET_KEY", "uy@t!1ss%3f4fm8@dkgyoc7%2rgs@4xkmw=t!ll4i&+b*$w6bh")
