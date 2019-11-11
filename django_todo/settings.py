@@ -30,7 +30,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', "Env Value Not Loaded")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
+DEBUG = True
 
 #A LLOWED_HOSTS = ["0.0.0.0","django-todo-sr.herokuapp.com"]
 ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), os.environ.get('HOSTNAME')]
