@@ -26,7 +26,8 @@ SECRET_KEY = '4g0n#3@(vscop2&sf70(!#8_ge6dp21n&tyye@=#p9^o2ump@t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0","django-todo-sr.herokuapp.com"]
+#A LLOWED_HOSTS = ["0.0.0.0","django-todo-sr.herokuapp.com"]
+ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), os.environ.get('HOSTNAME')]
 
 
 # Application definition
@@ -81,8 +82,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-DATABASES = {'default':dj_database_url.parse("postgres://mbmmwmpyppkvfz:1422e064e099c6921fb3dcae99708c9b2454c79cfe9a3c32b8705aa17987d944@ec2-54-247-72-30.eu-west-1.compute.amazonaws.com:5432/d7aum4vifdo7tq")}
-
+DATABASES = {'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+# "postgres://mbmmwmpyppkvfz:1422e064e099c6921fb3dcae99708c9b2454c79cfe9a3c32b8705aa17987d944@ec2-54-247-72-30.eu-west-1.compute.amazonaws.com:5432/d7aum4vifdo7tq"
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
